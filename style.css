@@ -1,0 +1,354 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+    color: white;
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/background.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 140px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: rgb(153, 204, 255);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%
+}
+
+.header-text {
+    margin-top: 20%;
+    font: size 30px;
+}
+
+.header-text h1 {
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.header-text h1 span {
+    color: blue;
+}
+
+
+/*------------about-----------*/
+
+#about {
+    padding: 80px;
+    color: rgb(255, 246, 229);
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1 {
+    flex-basis: 35%;
+}
+
+.about-col-1 img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.about-col-2 {
+    flex-basis: 60%;
+}
+
+.sub-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: white;
+}
+
+.about-col-2 span.only {
+    color: blue;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: rgb(153, 204, 255);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+    width: 50px;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents span {
+    color: blue;
+    font-size: 14px;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+
+/*-------about end------------*/
+
+
+/*-----------services-----------*/
+
+#services {
+    padding: 30px 0;
+}
+
+
+/*to add grid*/
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.services-list div {
+    background: #252525;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 15px;
+    /*hover effect in my servicer move cursor on the box effect */
+    transition: background 0.5s, transform 0.5s;
+}
+
+.services-list div i {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.services-list div {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.services-list div a {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+
+/*hover effect on my services*/
+
+.services-list div:hover {
+    background: blue;
+    transform: translateY(-10px);
+}
+
+
+/*------------service end-----------*/
+
+
+/*------------portfolio-------------*/
+
+#portfolio {
+    padding: 50px 0;
+}
+
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    /*to add smooth zoom in effect*/
+    transition: transform 0.5s;
+}
+
+
+/* to add words above the image css*/
+
+.layer {
+    width: 100%;
+    /*when we put height as 100 it will show when 0 it will not but persent*/
+    height: 0%;
+    background: linear-gradient(rgba( 0, 0, 0, 0.6), blue);
+    border-radius: 10px;
+    /*to add the text and that color over the image*/
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.layer h3 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+
+/*designe the link icon*/
+
+.layer a {
+    margin-top: 20px;
+    color: blue;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+
+/*to add zomm in effect in images*/
+
+.work:hover img {
+    transform: scale(1.1);
+}
+
+
+/*to show the hidden links on the image (that hover effect)*/
+
+.work:hover .layer {
+    height: 100%
+}
+
+
+/* To add button the likn (See More) below the image */
+
+.btn {
+    display: block;
+    margin: 50px/*left right->*/
+    auto;
+    width: fit-content;
+    border: 1px solid blue;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    /*to add the transition effect*/
+    transition: background 0.5s;
+}
+
+
+/* hover effect when the hover the background color will bi change*/
+
+.btn:hover {
+    background: blue;
+}
+
+
+/*------------------protfolio end----------------*/
+
+
+/*-----------------contact---------------------*/
+
+
+/*------to adjust the left and right col---------*/
+
+.contact-left {
+    flex-basis: 35%;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+
+/*-----------designe the text and icon-----------*/
+
+.contact-left p {
+    margin-top: 30px;
+}
