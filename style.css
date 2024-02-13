@@ -30,7 +30,7 @@ nav {
 }
 
 .logo {
-    width: 140px;
+    width: 200px;
 }
 
 nav ul li {
@@ -72,7 +72,7 @@ nav ul li a:hover::after {
 }
 
 .header-text h1 span {
-    color: blue;
+    color: rgba(72, 66, 255);
 }
 
 
@@ -109,7 +109,7 @@ nav ul li a:hover::after {
 }
 
 .about-col-2 span.only {
-    color: blue;
+    color: rgba(72, 66, 255);
 }
 
 .tab-titles {
@@ -313,7 +313,7 @@ nav ul li a:hover::after {
     margin: 50px/*left right->*/
     auto;
     width: fit-content;
-    border: 1px solid blue;
+    border: 1px solid rgba(72, 66, 255);
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
@@ -399,7 +399,7 @@ nav ul li a:hover::after {
 /*----------end of the designe button--------*/
 
 
-/*---------form designe start-----------*/
+/*---------form designe start (input field)-----------*/
 
 .contact-right form {
     width: 100%;
@@ -416,4 +416,36 @@ form textarea {
     color: white;
     font: size 10px;
     border-radius: 6px;
+}
+
+
+/*to change the button visuals */
+
+form .btn2 {
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+
+/*-----end form designe start (input field)----*/
+
+
+/*-------footer for copyright----------*/
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    background-color: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+
+/*---Change the Color of the heart------*/
+
+.copyright i {
+    color: red;
 }
