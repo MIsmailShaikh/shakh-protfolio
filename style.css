@@ -349,6 +349,71 @@ nav ul li a:hover::after {
 
 /*-----------designe the text and icon-----------*/
 
+
+/*----------designe the icon of email and phone----*/
+
 .contact-left p {
     margin-top: 30px;
+}
+
+.contact-left p i {
+    color: rgb(72, 66, 255);
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+
+/*-----------to design the social media icon--------*/
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    /*to arrange the icon in one after the other in single line*/
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover {
+    color: rgba(72, 66, 255);
+    transform: translateY(-5px);
+}
+
+
+/*--------end of social icon designe----*/
+
+
+/*-------designe the button--------*/
+
+.btn.btn2 {
+    display: inline-block;
+    background-color: rgba(72, 66, 255);
+}
+
+
+/*----------end of the designe button--------*/
+
+
+/*---------form designe start-----------*/
+
+.contact-right form {
+    width: 100%;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: white;
+    font: size 10px;
+    border-radius: 6px;
 }
