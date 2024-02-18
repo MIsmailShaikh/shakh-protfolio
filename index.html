@@ -11,214 +11,224 @@
 
 </head>
 
-<body>
-    <div id="header">
-        <div class="container">
-            <nav>
-                <span><i class="fa-solid fa-code"></i></span>
-                <ul>
-                    <li><a href='#'>Home</a></li>
-                    <li><a href='#'>About</a></li>
-                    <li><a href='#'>Services</a></li>
-                    <li><a href='#'>Portfolio</a></li>
-                    <li><a href='#'>Contact</a></li>
-                    <!--to add the x icon in the top-->
-                    <i class="fas fa-times"></i>
-                </ul>
-                <!--to add the bar icon in top(burger icon)-->
-                <i class="fas fa-bars"></i>
+<div id="header">
+    <div class="container">
+        <nav>
+            <span><i class="fa-solid fa-code"></i></span>
+            <ul id="sidemenu">
+                <li><a href='#header'>Home</a></li>
+                <li><a href='#about'>About</a></li>
+                <li><a href='#services'>Services</a></li>
+                <li><a href='#portfolio'>Portfolio</a></li>
+                <li><a href='#contact'>Contact</a></li>
+                <!--to add the x icon in the top-->
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <!--to add the bar icon in top(burger icon)-->
+            <i class="fas fa-bars" onclick="openmenu()"></i>
 
-            </nav>
-            <div class="header-text">
-                <p>Software developer</p>
-                <h1>Hi, I'm Md <span>Ismail.</span><br> Shaikh</h1>
+        </nav>
+        <div class="header-text">
+            <p>Software developer</p>
+            <h1>Hi, I'm Md <span>Ismail.</span><br> Shaikh</h1>
+        </div>
+    </div>
+</div>
+<!------about------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About me</h1>
+                <p>
+                    Hello! My name is <span class="only">Mohammed Ismail Shaikh.</span> Currently, I am pursuing a Bachelor of Computer Applications (BCA) at Vidya Vikas. In my free time, I enjoy diving into the world of computer games and binge-watching
+                    web series. These hobbies not only provide entertainment but also serve as a great way to unwind and explore different narratives. I'm passionate about technology and always eager to learn more about the ever-evolving world of computing.
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('Education')">Education</p>
+                    <p class="tab-links" onclick="opentab('Skills')">Skills</p>
+                </div>
+                <div class="tab-contents active-tab" id="Education">
+                    <ul>
+                        <li><span>2023</span><br>BCA From Vidya Vikas First Grade College</li>
+                        <li><span>2020</span><br>PUC From Shaheen Pre University College</li>
+                        <li><span>2018</span><br>SSLC From Malnad English School</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Skills">
+                    <ul>
+                        <li><span>Development</span><br>Software Developer</li>
+                        <li><span>Microsoft</span><br>Advance Exel</li>
+                        <li><span>Web Developemt</span><br>Website Development</li>
+                    </ul>
+                </div>
+
+
             </div>
         </div>
     </div>
-    <!------about------->
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="images/user.png">
-                </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About me</h1>
-                    <p>
-                        Hello! My name is <span class="only">Mohammed Ismail Shaikh.</span> Currently, I am pursuing a Bachelor of Computer Applications (BCA) at Vidya Vikas. In my free time, I enjoy diving into the world of computer games and binge-watching
-                        web series. These hobbies not only provide entertainment but also serve as a great way to unwind and explore different narratives. I'm passionate about technology and always eager to learn more about the ever-evolving world of
-                        computing.
-                    </p>
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('Education')">Education</p>
-                        <p class="tab-links" onclick="opentab('Skills')">Skills</p>
-                    </div>
-                    <div class="tab-contents active-tab" id="Education">
-                        <ul>
-                            <li><span>2023</span><br>BCA From Vidya Vikas First Grade College</li>
-                            <li><span>2020</span><br>PUC From Shaheen Pre University College</li>
-                            <li><span>2018</span><br>SSLC From Malnad English School</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="Skills">
-                        <ul>
-                            <li><span>Development</span><br>Software Developer</li>
-                            <li><span>Microsoft</span><br>Advance Exel</li>
-                            <li><span>Web Developemt</span><br>Website Development</li>
-                        </ul>
-                    </div>
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
 
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-
-        function opentab(tabname) {
-            for (tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-            for (tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link")
-            document.getElementById(tabname).classList.add("active-tab");
+    function opentab(tabname) {
+        for (tablink of tablinks) {
+            tablink.classList.remove("active-link");
         }
-    </script>
-    <!------about end------------->
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+<!--to add the open and close function to burger button and close button in mobile-->
+<script>
+    var sidemenu = document.getElementById("sidemenu");
 
-    <!--------services-------->
-    <div id="services">
-        <div class="container">
-            <h1 class="sub-title">My Services</h1>
-            <div class="services-list">
-                <div>
-                    <i class="fa-solid fa-code"></i>
-                    <h2>Yet To Bi Add</h2>
-                    <br>
-                    <p>In summary, the provided JavaScript code is part of a mechanism for handling tabs on a webpage.
-                    </p>
-                    <a href="#">Learn more</a>
-                </div>
-                <div>
-                    <i class="fa-solid fa-code"></i>
-                    <h2>Yet To Bi Add</h2>
-                    <br>
-                    <p>In summary, the provided JavaScript code is part of a mechanism for handling tabs on a webpage.
-                    </p>
-                    <a href="#">Learn more</a>
-                </div>
-                <div>
-                    <i class="fa-solid fa-code"></i>
-                    <h2>Yet To Bi Add</h2>
-                    <br>
-                    <p>In summary, the provided JavaScript code is part of a mechanism for handling tabs on a webpage.
-                    </p>
-                    <a href="#">Learn more</a>
-                </div>
+    function openmenu() {
+        sidemenu.style.right = "0";
+    }
+
+    function closemenu() {
+        sidemenu.style.right = "-200px";
+    }
+</script>
+<!------about end------------->
+
+<!--------services-------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Yet To Bi Add</h2>
+                <br>
+                <p>In summary, the provided JavaScript code is part of a mechanism for handling tabs on a webpage.
+                </p>
+                <a href="#">Learn more</a>
             </div>
-        </div>
-        <!---------services end-------------->
-
-        <!-------portfolio-------->
-        <div id="portfolio">
-            <div class="container">
-                <h1 class="sub-title">My Work</h1>
-                <!-----to add images to my work-->
-
-                <!----first image-->
-                <div class="work-list">
-                    <div class="work">
-                        <img src="images/work-1.png">
-
-                        <!-----words of the image------->
-                        <div class="layer">
-                            <h3>To Bi Added</h3>
-                            <p>when I develop a app i will add this To this tab
-
-                            </p>
-                            <a href="#"><i class="fa-solid fa-link"></i></a>
-                        </div>
-                    </div>
-
-                    <!---second image------------->
-                    <div class="work">
-                        <img src="images/work-2.png">
-
-                        <!-----words of the image------->
-                        <div class="layer">
-                            <h3>To Bi Added</h3>
-                            <p>when I develop a app i will add this To this tab.
-                            </p>
-                            <a href="#"><i class="fa-solid fa-link"></i></a>
-                        </div>
-                    </div>
-
-                    <!---third image--------->
-                    <div class="work">
-                        <img src="images/work-3.png">
-
-                        <!-----words of the image------->
-                        <div class="layer">
-                            <h3>To Bi Added</h3>
-                            <p>when I develop a app i will add this To this tab.
-                            </p>
-                            <a href="#"><i class="fa-solid fa-link"></i></a>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-----to add button link below the my work images col-->
-                <a href="#" class="btn">See More</a>
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Yet To Bi Add</h2>
+                <br>
+                <p>In summary, the provided JavaScript code is part of a mechanism for handling tabs on a webpage.
+                </p>
+                <a href="#">Learn more</a>
             </div>
-        </div>
-
-        <!----------------contact--------------------->
-        <div id="contact">
-            <div class="container">
-                <!----we will add contents in 2 colms (in first one we will add social media etc),
-                    (in right col we add contact info)---->
-                <div class="row">
-                    <div class="contact-left">
-                        <h1 calss="sub-title">Contact Me</h1>
-                        <p><i class="fa-regular fa-paper-plane"></i> mohammedismailshaikh454@gmail.com</p>
-                        <p><i class="fa-solid fa-square-phone"></i> +91 9632082189</p>
-                        <!---to add social media icons---->
-                        <div class="social-icons">
-                            <a href=""><i class="fa-brands fa-linkedin"></i></a>
-                            <a href=""><i class="fa-brands fa-github"></i></a>
-                            <a href=""><i class="fa-brands fa-x-twitter"></i></a>
-                            <a href=""><i class="fa-brands fa-whatsapp"></i></a>
-                        </div>
-                        <!---end of social media icon-->
-
-                        <!--download cv button-->
-
-                        <a href="#" download class="btn btn2">Download My CV</a>
-
-                    </div>
-                    <div class="contact-right">
-                        <form>
-                            <input type="text" name="Name" placeholder="Your Name" required>
-                            <input type="email" name="Email" placeholder="Your email" required>
-                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                            <button type="submit" class="btn btn2">Submit</button>
-                        </form>
-                    </div>
-
-                </div>
-
-
-            </div>
-            <div class="copyright">
-                <p>Copyright &copy Shiakh. Made With <i class="fa-solid fa-heart"></i> by Shaikh </p>
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Yet To Bi Add</h2>
+                <br>
+                <p>In summary, the provided JavaScript code is part of a mechanism for handling tabs on a webpage.
+                </p>
+                <a href="#">Learn more</a>
             </div>
         </div>
     </div>
+    <!---------services end-------------->
+
+    <!-------portfolio-------->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <!-----to add images to my work-->
+
+            <!----first image-->
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png">
+
+                    <!-----words of the image------->
+                    <div class="layer">
+                        <h3>To Bi Added</h3>
+                        <p>when I develop a app i will add this To this tab
+
+                        </p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+
+                <!---second image------------->
+                <div class="work">
+                    <img src="images/work-2.png">
+
+                    <!-----words of the image------->
+                    <div class="layer">
+                        <h3>To Bi Added</h3>
+                        <p>when I develop a app i will add this To this tab.
+                        </p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+
+                <!---third image--------->
+                <div class="work">
+                    <img src="images/work-3.png">
+
+                    <!-----words of the image------->
+                    <div class="layer">
+                        <h3>To Bi Added</h3>
+                        <p>when I develop a app i will add this To this tab.
+                        </p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-----to add button link below the my work images col-->
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+
+    <!----------------contact--------------------->
+    <div id="contact">
+        <div class="container">
+            <!----we will add contents in 2 colms (in first one we will add social media etc),
+                    (in right col we add contact info)---->
+            <div class="row">
+                <div class="contact-left">
+                    <h1 calss="sub-title">Contact Me</h1>
+                    <p><i class="fa-regular fa-paper-plane"></i> mohammedismailshaikh454@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i> +91 9632082189</p>
+                    <!---to add social media icons---->
+                    <div class="social-icons">
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        <a href=""><i class="fa-brands fa-github"></i></a>
+                        <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                    <!---end of social media icon-->
+
+                    <!--download cv button-->
+
+                    <a href="#" download class="btn btn2">Download My CV</a>
+
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="copyright">
+            <p>Copyright &copy Shiakh. Made With <i class="fa-solid fa-heart"></i> by Shaikh </p>
+        </div>
+    </div>
+</div>
 </body>
 
 </html>
