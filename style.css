@@ -10,6 +10,14 @@ body {
     color: white;
 }
 
+span .fa-solid {
+    color: white;
+    font-size: 250%;
+    position: relative;
+    right: 0%;
+    color: rgb(68, 68, 233);
+}
+
 #header {
     width: 100%;
     height: 100vh;
@@ -448,4 +456,61 @@ form .btn2 {
 
 .copyright i {
     color: red;
+}
+
+
+/*----------end of foter for copyright------------*/
+
+
+/*----------------------css for phone and small screen (by using media queries)------------*/
+
+
+/*the below code only applicable for small screen or mobile phone*/
+
+
+/*to hide the X ans bars in the bigger screen*/
+
+nav .fas {
+    display: none;
+}
+
+@media only screen and (max-width:600px) {
+    #header {
+        background: url(images/backgroundforsmallscerrem.png);
+        background-size: cover;
+    }
+    .header-text {
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1 {
+        font-size: 35px;
+    }
+    /*to show the X icon and the bars in the phone screen and also 
+    change the size of the icon*/
+    nav .fas {
+        display: block;
+        font-size: 25px;
+    }
+    /*to hide the menu list in the mobile view*/
+    nav ul {
+        background: blue;
+        position: fixed;
+        top: 0;
+        right: -170px;
+        width: 170px;
+        height: 100vh;
+        padding-top: 50px;
+    }
+    /*to arrange the menu items*/
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fas {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
 }
