@@ -14,12 +14,10 @@ body {
     color: white;
 }
 
-span .fa-solid {
-    color: white;
-    font-size: 250%;
+span img {
+    width: 100px;
     position: relative;
-    right: 0%;
-    color: rgb(68, 68, 233);
+    right: 30%;
 }
 
 #header {
@@ -85,6 +83,11 @@ nav ul li a:hover::after {
 
 .header-text h1 span {
     color: rgba(72, 66, 255);
+}
+
+.header-text h1 i {
+    color: rgba(72, 66, 255);
+    font-size: 70%;
 }
 
 
@@ -203,6 +206,16 @@ nav ul li a:hover::after {
 .services-list div i {
     font-size: 50px;
     margin-bottom: 30px;
+}
+
+.services-list div p i {
+    color: whitesmoke;
+    font-size: 20px;
+    margin: 0;
+}
+
+.services-list div p {
+    font-family: cursive;
 }
 
 .services-list div {
